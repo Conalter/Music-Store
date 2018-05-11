@@ -11,7 +11,7 @@ public class PianoTest {
 
     @Before
     public void before(){
-        piano = new Piano("Yamaha Grand Piano", "Fully functional acoustic piano with a powerful high-quality digital sound engine, providing a vast range of sonic possibilities.", 10000.00, 24000.00, "Percussion");
+        piano = new Piano("Yamaha Grand Piano", "Fully functional acoustic piano with a powerful high-quality digital sound engine, providing a vast range of sonic possibilities.", 10000.00, 24000.00, "Percussion", 88, 3);
     }
 
     @Test
@@ -38,4 +38,15 @@ public class PianoTest {
     public void canGetFamily(){
         assertEquals("Percussion", piano.getFamily());
     }
+
+    @Test
+    public void canGetNumberOfKeys(){
+        assertEquals(88, piano.getKeys());
+    }
+
+    @Test
+    public void canGetNumberOfPeddles(){
+        assertEquals(3, piano.getPeddles());
+    }
+
 }
