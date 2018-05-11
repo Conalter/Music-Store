@@ -33,4 +33,9 @@ public class PianoTest {
     public void canGetRetail(){
         assertEquals(24000.00, piano.getRetail(), 0.01);
     }
+
+    @Test
+    public void canGetFamily(){
+        assertEquals("Percussion", piano.getFamily());
+    }
 }
