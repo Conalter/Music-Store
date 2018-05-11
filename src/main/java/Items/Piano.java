@@ -1,6 +1,8 @@
 package Items;
 
-public class Piano extends MusicalInstrument{
+import playable.Playable;
+
+public class Piano extends MusicalInstrument implements Playable {
 
     private int keys;
     private int peddles;
@@ -17,5 +19,10 @@ public class Piano extends MusicalInstrument{
 
     public int getPeddles() {
         return peddles;
+    }
+
+
+    public String play() {
+        return "plink plonk goes the piano";
     }
 }
