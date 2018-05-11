@@ -18,4 +18,9 @@ public class PianoTest {
     public void canGetName(){
         assertEquals("Yamaha Grand Piano", piano.getName());
     }
+
+    @Test
+    public void canGetDescription(){
+        assertEquals("Fully functional acoustic piano with a powerful high-quality digital sound engine, providing a vast range of sonic possibilities.", piano.getDescription());
+    }
 }
