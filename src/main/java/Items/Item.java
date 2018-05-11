@@ -1,3 +1,5 @@
+package Items;
+
 public abstract class Item  {
 
     private String name;
@@ -43,4 +45,5 @@ public abstract class Item  {
     public void setRetail(double retail) {
         this.retail = retail;
     }
+
 }
