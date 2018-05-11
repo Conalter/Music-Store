@@ -23,4 +23,9 @@ public class PianoTest {
     public void canGetDescription(){
         assertEquals("Fully functional acoustic piano with a powerful high-quality digital sound engine, providing a vast range of sonic possibilities.", piano.getDescription());
     }
+
+    @Test
+    public void canGetCost(){
+        assertEquals(10000.00, piano.getCost(), 0.01);
+    }
 }
