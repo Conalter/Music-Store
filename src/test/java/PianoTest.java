@@ -28,4 +28,9 @@ public class PianoTest {
     public void canGetCost(){
         assertEquals(10000.00, piano.getCost(), 0.01);
     }
+
+    @Test
+    public void canGetRetail(){
+        assertEquals(24000.00, piano.getRetail(), 0.01);
+    }
 }
