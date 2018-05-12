@@ -1,4 +1,6 @@
-package Items;
+package items.musical_instruments;
+
+import items.Item;
 
 public abstract class MusicalInstrument extends Item {
 

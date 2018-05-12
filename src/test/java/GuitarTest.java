@@ -1,6 +1,6 @@
-import Items.FamilyType;
-import Items.Guitar;
-import Items.Material;
+import items.musical_instruments.FamilyType;
+import items.musical_instruments.Guitar;
+import items.Material;
 import org.junit.Before;
 import org.junit.Test;
 

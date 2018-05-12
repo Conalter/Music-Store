@@ -1,6 +1,6 @@
-import Items.DrumKit;
-import Items.FamilyType;
-import Items.Material;
+import items.musical_instruments.DrumKit;
+import items.musical_instruments.FamilyType;
+import items.Material;
 import org.junit.Before;
 import org.junit.Test;
 

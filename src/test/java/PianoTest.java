@@ -1,7 +1,6 @@
-import Items.FamilyType;
-import Items.Item;
-import Items.Material;
-import Items.Piano;
+import items.musical_instruments.FamilyType;
+import items.Material;
+import items.musical_instruments.Piano;
 import org.junit.Before;
 import org.junit.Test;
 

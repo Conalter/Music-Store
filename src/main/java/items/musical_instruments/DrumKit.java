@@ -1,5 +1,6 @@
-package Items;
+package items.musical_instruments;
 
+import items.Material;
 import playable.Playable;
 
 public class DrumKit extends MusicalInstrument implements Playable{
