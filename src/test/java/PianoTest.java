@@ -1,3 +1,4 @@
+import Items.FamilyType;
 import Items.Item;
 import Items.Piano;
 import org.junit.Before;
@@ -8,10 +9,11 @@ import static org.junit.Assert.assertEquals;
 public class PianoTest {
 
     Piano piano;
+    FamilyType family;
 
     @Before
     public void before(){
-        piano = new Piano("Yamaha Grand Piano", "Fully functional acoustic piano with a powerful high-quality digital sound engine, providing a vast range of sonic possibilities.", 10000.00, 24000.00, "Percussion", 88, 3);
+        piano = new Piano("Yamaha Grand Piano", "Fully functional acoustic piano with a powerful high-quality digital sound engine, providing a vast range of sonic possibilities.", 10000.00, 24000.00, FamilyType.PERCUSSION,88, 3);
     }
 
     @Test
@@ -36,7 +38,7 @@ public class PianoTest {
 
     @Test
     public void canGetFamily(){
-        assertEquals("Percussion", piano.getFamily());
+        assertEquals(FamilyType.PERCUSSION, piano.getFamily());
     }
 
     @Test

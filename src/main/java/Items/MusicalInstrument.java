@@ -2,18 +2,14 @@ package Items;
 
 public abstract class MusicalInstrument extends Item {
 
-    private String family;
+    private FamilyType family;
 
-    public MusicalInstrument(String name, String description, double cost, double retail, String family) {
+    public MusicalInstrument(String name, String description, double cost, double retail, FamilyType family) {
         super(name, description, cost, retail);
-        this.family = family;
     }
 
-    public String getFamily() {
+    public FamilyType getFamily() {
         return family;
     }
 
-    public void setFamily(String family) {
-        this.family = family;
-    }
 }
