@@ -6,7 +6,4 @@ public class GuitarString extends Miscellaneous {
         super(name, description, cost, retail);
     }
 
-
-
-
 }
