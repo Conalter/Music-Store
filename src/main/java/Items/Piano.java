@@ -4,9 +4,9 @@ import playable.Playable;
 
 public class Piano extends MusicalInstrument implements Playable {
 
-    private FamilyType family;
     private int keys;
     private int peddles;
+    private FamilyType family;
 
     public Piano(String name, String description, double cost, double retail, FamilyType family, int keys, int peddles) {
         super(name, description, cost, retail, family);

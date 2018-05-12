@@ -4,9 +4,9 @@ import playable.Playable;
 
 public class DrumKit extends MusicalInstrument implements Playable{
 
-    private FamilyType family;
     private int skins;
     private int sticks;
+    private FamilyType family;
 
     public DrumKit(String name, String description, double cost, double retail, FamilyType family, int skins, int sticks) {
         super(name, description, cost, retail, family);
