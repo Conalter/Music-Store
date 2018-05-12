@@ -7,12 +7,14 @@ public class DrumKit extends MusicalInstrument implements Playable{
     private int skins;
     private int sticks;
     private FamilyType family;
+    private Material material;
 
-    public DrumKit(String name, String description, double cost, double retail, FamilyType family, int skins, int sticks) {
+    public DrumKit(String name, String description, double cost, double retail, FamilyType family, int skins, int sticks, Material material) {
         super(name, description, cost, retail, family);
         this.skins = skins;
         this.sticks = sticks;
         this.family = family;
+        this.material = material;
     }
 
     public int getSkins() {
@@ -29,5 +31,9 @@ public class DrumKit extends MusicalInstrument implements Playable{
 
     public String play(){
         return "bish bash goes the drums";
+    }
+
+    public Material getMaterial(){
+        return this.material;
     }
 }

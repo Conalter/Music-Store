@@ -1,5 +1,6 @@
 import Items.DrumKit;
 import Items.FamilyType;
+import Items.Material;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,11 +9,12 @@ import static org.junit.Assert.assertEquals;
 public class DrumKitTest {
 
     DrumKit drumkit;
+    Material material;
 
 
     @Before
     public void before(){
-        drumkit = new DrumKit("Ludwig Centennial Zep Set", "High-quality shell pack from Ludwig.", 500.00, 1300.00, FamilyType.PERCUSSION, 10, 12);
+        drumkit = new DrumKit("Ludwig Centennial Zep Set", "High-quality shell pack from Ludwig.", 500.00, 1300.00, FamilyType.PERCUSSION, 10, 12, Material.PLASTIC);
     }
 
     @Test
@@ -28,5 +30,10 @@ public class DrumKitTest {
     @Test
     public void canGetFamily(){
         assertEquals(FamilyType.PERCUSSION, drumkit.getFamily());
+    }
+
+    @Test
+    public void canGetMaterial(){
+        assertEquals(Material.PLASTIC, drumkit.getMaterial());
     }
 }

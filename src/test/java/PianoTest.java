@@ -1,5 +1,6 @@
 import Items.FamilyType;
 import Items.Item;
+import Items.Material;
 import Items.Piano;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,10 +11,11 @@ public class PianoTest {
 
     Piano piano;
     FamilyType family;
+    Material material;
 
     @Before
     public void before(){
-        piano = new Piano("Yamaha Grand Piano", "Fully functional acoustic piano with a powerful high-quality digital sound engine, providing a vast range of sonic possibilities.", 10000.00, 24000.00, FamilyType.PERCUSSION,88, 3);
+        piano = new Piano("Yamaha Grand Piano", "Fully functional acoustic piano with a powerful high-quality digital sound engine, providing a vast range of sonic possibilities.", 10000.00, 24000.00, FamilyType.PERCUSSION,88, 3, Material.WOOD);
     }
 
     @Test
@@ -54,6 +56,11 @@ public class PianoTest {
     @Test
     public void canPlayPiano(){
         assertEquals("plink plonk goes the piano", piano.play());
+    }
+
+    @Test
+    public void canGetMaterial(){
+        assertEquals(Material.WOOD, piano.getMaterial());
     }
 
 }
