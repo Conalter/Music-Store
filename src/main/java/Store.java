@@ -23,4 +23,8 @@ public class Store {
     public void addStock(Sellable item){
         stock.add(item);
     }
+
+    public void removeStock(Sellable item){
+        stock.remove(item);
+    }
 }
