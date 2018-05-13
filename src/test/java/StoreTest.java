@@ -50,4 +50,13 @@ public class StoreTest {
         store.addStock(piano);
         assertEquals(14, store.calculateProfit(), 0.01);
     }
+
+    @Test
+    public void canSellItem(){
+        store.addStock(sheetMusic);
+        store.addStock(sheetMusic);
+        store.sellItem(sheetMusic);
+        assertEquals(1, store.stockCount());
+        assertEquals(1, store.soldCount());
+    }
 }

@@ -6,10 +6,12 @@ public class Store {
 
     private String name;
     private ArrayList<Sellable> stock;
+    private ArrayList<Sellable> sold;
 
     public Store(String name){
         this.name = name;
         stock = new ArrayList<>();
+        sold = new ArrayList<>();
     }
 
     public String getName(){
@@ -34,5 +36,14 @@ public class Store {
             profit += item.calculateMarkup();
         }
         return profit;
+    }
+
+    public int soldCount(){
+        return sold.size();
+    }
+
+    public void sellItem(Sellable item){
+        stock.remove(item);
+        sold.add(item);
     }
 }
