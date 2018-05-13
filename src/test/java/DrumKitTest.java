@@ -36,4 +36,9 @@ public class DrumKitTest {
     public void canGetMaterial(){
         assertEquals(Material.PLASTIC, drumkit.getMaterial());
     }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(800.00, drumkit.calculateMarkup(), 0.01);
+    }
 }

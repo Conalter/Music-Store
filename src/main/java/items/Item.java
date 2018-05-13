@@ -1,6 +1,8 @@
 package items;
 
-public abstract class Item  {
+import sellable.Sellable;
+
+public abstract class Item implements Sellable {
 
     private String name;
     private String description;
@@ -46,4 +48,7 @@ public abstract class Item  {
         this.retail = retail;
     }
 
+    public double calculateMarkup() {
+        return retail - cost;
+    }
 }
