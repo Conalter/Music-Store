@@ -30,9 +30,17 @@ public class Store {
         stock.remove(item);
     }
 
-    public double calculateProfit(){
-        double profit = 0.0;
+    public Double calculateProfit(){
+        Double profit = 0.0;
         for (Sellable item : stock) {
+            profit += item.calculateMarkup();
+        }
+        return profit;
+    }
+
+    public Double calculateTotalProfit(){
+        Double profit = 0.0;
+        for (Sellable item : sold) {
             profit += item.calculateMarkup();
         }
         return profit;

@@ -59,4 +59,13 @@ public class StoreTest {
         assertEquals(1, store.stockCount());
         assertEquals(1, store.soldCount());
     }
+
+    @Test
+    public void canCalculateTotalProfit(){
+        store.addStock(piano);
+        store.addStock(sheetMusic);
+        store.sellItem(piano);
+        store.sellItem(sheetMusic);
+        assertEquals(15, store.calculateTotalProfit(), 0.01);
+    }
 }
