@@ -7,11 +7,13 @@ public class Store {
     private String name;
     private ArrayList<Sellable> stock;
     private ArrayList<Sellable> sold;
+    private Double money;
 
     public Store(String name){
         this.name = name;
-        stock = new ArrayList<>();
-        sold = new ArrayList<>();
+        this.stock = new ArrayList();
+        this.sold = new ArrayList<>();
+        this.money = 0.0;
     }
 
     public String getName(){
@@ -54,4 +56,21 @@ public class Store {
         stock.remove(item);
         sold.add(item);
     }
+
+    public Double hasCash(){
+        return money;
+    }
+
+    public void canAddToCash(Double total){
+        this.money += total;
+    }
+
+    public Double canReduceCash(Double total){
+        if (money > total){
+            this.money -= total;
+            return total;
+        }
+        return null;
+    }
+
 }

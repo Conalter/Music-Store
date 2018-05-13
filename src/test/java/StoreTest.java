@@ -68,4 +68,22 @@ public class StoreTest {
         store.sellItem(sheetMusic);
         assertEquals(15, store.calculateTotalProfit(), 0.01);
     }
+
+    @Test
+    public void canGetCash(){
+        assertEquals(0.0, store.hasCash(), 0.01);
+    }
+
+    @Test
+    public void canAddToCash(){
+        store.canAddToCash(100.00);
+        assertEquals(100.00, store.hasCash(), 0.01);
+    }
+
+    @Test
+    public void canReduceCash(){
+        store.canAddToCash(100.00);
+        assertEquals(50.00, store.canReduceCash(50.00), 0.01);
+        assertEquals(50.00, store.hasCash(), 0.01);
+    }
 }
